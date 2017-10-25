@@ -1,5 +1,10 @@
 function Airport() {
+  const maxCapacity = 10;
   var planes = []
+
+  Airport.prototype.maxCapacity = function() {
+    return maxCapacity;
+  };
 
   Airport.prototype.planes = function() {
     return planes;
@@ -8,7 +13,11 @@ function Airport() {
   Airport.prototype.takeOff = function() {};
 
   Airport.prototype.land = function(plane) {
-    planes.push(plane);
+    if (planes.length < maxCapacity) {
+      planes.push(plane);
+    } else {
+      throw new Error('Airport full!');
+    };
   };
 
 };

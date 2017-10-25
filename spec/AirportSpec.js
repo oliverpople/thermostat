@@ -7,8 +7,6 @@ describe("Airport", function() {
 
   beforeEach(function() {
     airport = new Airport();
-    // plane = new Plane();
-    // plane = jasmine.createSpy('plane')
   });
 
   it("can store planes", function() {
@@ -24,9 +22,8 @@ describe("Airport", function() {
     expect(airport.takeOff).not.toBeUndefined()
   });
 
-  it('prevents plane landing with planes is full', function() {
-    expect(foo.setBar.calls.count()).toEqual(0);
-    expect(airport.maxCapacity).toEqual()
+  it("should have a maximum capacity of 10", function() {
+    expect(airport.maxCapacity()).toEqual(10);
   });
 
 });
