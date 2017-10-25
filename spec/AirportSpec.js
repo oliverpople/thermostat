@@ -24,4 +24,9 @@ describe("Airport", function() {
     expect(airport.takeOff).not.toBeUndefined()
   });
 
+  it('prevents plane landing with planes is full', function() {
+    expect(foo.setBar.calls.count()).toEqual(0);
+    expect(airport.maxCapacity).toEqual()
+  });
+
 });
