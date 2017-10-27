@@ -1,0 +1,17 @@
+.low-usage {
+  color: green;
+}
+
+.medium-usage {
+  color: black;
+}
+
+.high-usage {
+  color: red;
+}
+
+button {
+    background-color: white;
+    color: black;
+    border: 2px solid black; /* Green */
+}
